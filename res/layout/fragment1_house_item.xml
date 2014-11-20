@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+
+    <com.android.volley.toolbox.NetworkImageView
+        android:id="@+id/house_im"
+        android:layout_width="110dp"
+        android:layout_height="80dp"
+        android:layout_margin="10dp" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingLeft="4dp"
+        android:paddingRight="40dp" >
+
+        <TextView
+            android:id="@+id/house_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="5dp"
+            android:lines="1"
+            android:textColor="#808080"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_marginLeft="5dp"
+            android:id="@+id/house_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:paddingTop="5dp"
+            android:textColor="#808080"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_marginLeft="5dp"
+            android:id="@+id/discount_note"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:paddingTop="5dp"
+            android:textColor="#3cb478"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+</LinearLayout>

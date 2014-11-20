@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/system_gray"
+        android:orientation="vertical" >
+
+        <include layout="@layout/title_bar" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:padding="@dimen/system_padding" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="75dp"
+                        android:layout_height="85dp"
+                        android:background="@drawable/image_border"
+                        android:gravity="center" >
+
+                        <ImageView
+                            android:id="@+id/im"
+                            android:layout_width="70dp"
+                            android:layout_height="80dp"
+                            android:scaleType="centerCrop" />
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/changephoto"
+                        android:layout_width="84dp"
+                        android:layout_height="32dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_gravity="bottom"
+                        android:background="@drawable/bt"
+                        android:text="修改头像"
+                        android:textColor="@android:color/white"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="昵称 ："
+                        android:textColor="@color/gray"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/username"
+                        style="@style/input_box"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/commit"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="20dp"
+                android:background="@drawable/queding"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="保     存"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <SlidingDrawer
+        android:id="@+id/sl"
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentBottom="true"
+        android:content="@+id/content"
+        android:handle="@+id/handle" >
+
+        <TextView
+            android:id="@+id/handle"
+            android:layout_width="0dp"
+            android:layout_height="0dp" />
+
+        <LinearLayout
+            android:id="@+id/content"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/bt1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/paizhao"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="拍照"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/bt2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/xiangce"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="从手机中选择"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/bt3"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/quxiao"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="取消"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+    </SlidingDrawer>
+
+</RelativeLayout>

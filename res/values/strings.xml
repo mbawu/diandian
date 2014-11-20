@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, DiandianmaifangActivity!</string>
+    <string name="app_name">点点卖房</string>
+    <string name="version">1.0</string>
+
+    <string name="userid_found">用户信息已存在，正在跳转登录操作…</string>
+    <string name="logining">使用%s帐号登录中…</string>
+    <string name="auth_cancel">授权操作已取消</string>
+    <string name="auth_error">授权操作遇到错误，请阅读Logcat输出</string>
+    <string name="auth_complete">授权成功，正在跳转登录操作…</string>
+    <string name="if_register_needed">如果您需要注册功能…</string>
+    <string name="after_auth">一般来说第三方登录时，第三方平台已经为您完成用户身份校验，您可以放心让用户登录。\n\n但如果您需要判断用户是否为新用户，可以在授权操作完成后，将用户的信息通过字段“HashMap userInfo”携带给login方法。客户端通过“String userId”执行登录请求，如果服务端判定此userId为未注册用户，可以将userInfo发送给注册接口，获取用户在此平台上的昵称、头像等数据，然后执行注册</string>
+    <string name="ok">确定</string>
+    
+    	
+	<string name="sms_message">短信</string>
+	
+	
+	
+
+	<string name="incentive_title">分享有奖</string>
+	<string name="failed_to_start_incentive_page">无法打开“分享有奖页面”</string>
+	<string name="download_faield">下载失败</string>
+	<string name="app_downloading">应用正在后台下载</string>
+
+	
+	<string name="login_immediately">立即登录个人中心</string>
+	<string name="score_for_gift">赢积分抢大礼！</string>
+	<string name="please_choose_login_platforms">请选择联合登录平台</string>
+	
+	<string name="weibo_title_msg">新浪微博登录</string>
+	<string name="qq_title_msg">QQ账号登录</string>
+	<string name="renren_title_msg">人人网账号登录</string>
+	<string name="douban_title_msg">豆瓣账号登录</string>
+	<string name="weibo_login_msg">授权优益C客户端访问你的微博账号</string>
+	<string name="qq_login_msg">授权优益C客户端访问你的QQ账号</string>
+	<string name="renren_login_msg">授权优益C客户端访问你的人人网账号</string>
+	<string name="douban_login_msg">授权优益C客户端访问你的豆瓣账号</string>
+	<string name="weibo_login_hint">请用新浪微博账号登录</string>
+	<string name="qq_login_hint">请用QQ号登录</string>
+	<string name="renren_login_hint">请用人人网账号登录</string>
+	<string name="douban_login_hint">请用豆瓣账号登录</string>
+	<string name="password_hint">请输入密码</string>
+	<string name="message_detail">消息详情</string>
+	
+	<string name="message">消息</string>
+	<string name="title_diandian">点点房源</string>
+	<string name="title_hosue_detail">楼盘详情</string>
+	<string name="title_group_buy">特惠团购</string>
+	<string name="title_suggest">推荐看房</string>
+	<string name="title_travel">旅游地产</string>
+	<string name="title_regist">用户注册</string>
+	<string name="title_getPassword">找回密码</string>
+	<string name="title_all_customer">所有客户</string>
+	<string name="title_customer_detail">客户详情</string>
+	<string name="title_change_phone">更换手机号码</string>
+	<string name="title_change_phone_2">输入新手机号码</string>
+	<string name="title_real_Authentication">实名认证</string>
+	<string name="title_change_psw">修改密码</string>
+	<string name="title_suggest_process">推荐流程</string>
+	<string name="title_feedback">意见反馈</string>
+	<string name="title_about">关于我们</string>
+	<string name="title_request_tikuan">申请提款</string>
+	
+	<string name="collect">收藏</string>
+	<string name="recommend">马上推荐</string>
+	<string name="privileges_msg">距优惠结束 ：</string>
+	<string name="house_map">楼盘地图</string>
+	<string name="corp_rule">合作规则</string>
+	<string name="house_style_in_sale">在售户型</string>
+	<string name="all_house_style">全部户型</string>
+	<string name="house_sale_point">楼盘卖点</string>
+	<string name="not_login">未登录</string>
+	<string name="click_right_login">请点击右侧登录</string>
+	<string name="Certification">实名认证</string>
+	<string name="Mycommission">我的佣金</string>
+	<string name="Mycollection">我的收藏</string>
+	<string name="Myteam">我的团队</string>
+	<string name="Mymessage">我的消息</string>
+	<string name="recommend_process">推荐流程</string>
+	<string name="my_invite">告诉朋友</string>
+	<string name="push_msg">推送消息</string>
+	<string name="feedback">意见反馈</string>
+	<string name="update_versioin">版本更新</string>
+	<string name="clear_cache">清空缓存</string>
+	<string name="about_us">关于我们</string>
+	<string name="service_num">客服电话</string>
+	<string name="user_login">用户登录</string>
+	<string name="regist">注册</string>
+	<string name="acount">账号 ：</string>
+	<string name="hint_acount">请输入您的手机号</string>
+	<string name="password">密码 ：</string>
+	<string name="forget_password">忘记密码？</string>
+	<string name="hint_password">请输入您的密码</string>
+	<string name="login">登 录</string>
+	<string name="commit">提 交</string>
+	<string name="ensure">确 定</string>
+	<string name="delete">删 除</string>
+	<string name="invitation">邀 请</string>
+	<string name="setting">设置</string>
+	<string name="detail">详情</string>
+	
+	<string name="errcode_success">发送成功</string>  
+	<string name="errcode_cancel">发送取消</string>  
+	<string name="errcode_deny">发送被拒绝</string>  
+	<string name="errcode_unknown">发送返回</string> 
+    
+	<string name="price_unit">%1$s 元/㎡</string>
+	<string name="yuan">%1$s 元</string>
+	<string name="Short_Msg_Content">悄悄地告诉你，零投入高回报的机会来啦！只要推荐买房客户到点点卖房，成交即可领取高额佣金。我已经加入了，快来注册赚佣金吧！</string>
+	
+	<string name="about_01">精准营销，渠道为王。</string>
+	<string name="about_02">点点卖房，中国房地产客户增量专家，专业解决“发展商案场渠道拓展难、上门少”的问题。点点卖房汇聚美国留学精英、国内知名大学教授、房地产实战专家智慧，借鉴全球领先的独立经纪人模式，历时1年多,耗资千万,开发出全球领先的O2O房产全民营销平台。</string>
+	<string name="about_03">点点卖房打通线上（Online）pc端、苹果app、安卓app、微信、微博五大入口，在“云平台”集合有效购房者需求信息和发展商产品信息，迅速有效匹配；线下（Offline）组建具有10多年房产代理经验的线下运作团队，设立400呼叫中心、渠道拓展部、活动策划部、外场销售部、云系统研发中心等专业团队，提供360度置业服务，开创了房地产流通领域第一个O2O闭环服务“云平台”，从而为开发商专业解决客户渠道问题，为经纪人提供创业平台，为购房者节省交易成本，实现多方共赢。</string>
+	<string name="about_04">点点卖房注册的每个经纪人，通过五大线上入口或400客服精准推荐购房用户，然后由点点卖房线下运作团队提供专业购房服务，成功达成交易后，获得丰厚佣金。同时，每个经纪人可以发展自己的经纪人团队，赚取团队奖励。</string>
+	<string name="about_05">点点卖房官网：www.diandianmaifang.com \n全国客服电话：400&#8211;666&#8211;7683</string>
+</resources>

@@ -1,0 +1,60 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="AppBaseTheme" parent="android:Theme.Light"></style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="top_category_scroll_view_item_text">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="title_button">
+        <item name="android:background">@drawable/top_bt</item>
+        <item name="android:layout_width">48dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:textColor">@color/title_text_color</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="ShareAnimation">
+        <item name="@android:windowEnterAnimation">@anim/slide_down_in</item>
+        <item name="@android:windowExitAnimation">@anim/slide_down_out</item>
+    </style>
+
+    <style name="ShareDialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowAnimationStyle">@style/ShareAnimation</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="menu_icon">
+        <item name="android:layout_width">24dp</item>
+        <item name="android:layout_height">24dp</item>
+        <item name="android:layout_margin">10dp</item>
+    </style>
+
+    <style name="input_box">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:textCursorDrawable">@color/blue</item>
+        <item name="android:background">@drawable/edit_text_selector</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:textColor">@color/darkgray</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColorHint">@color/lighter_gray</item>
+    </style>
+
+</resources>
