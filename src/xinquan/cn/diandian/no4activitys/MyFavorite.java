@@ -375,7 +375,7 @@ public class MyFavorite extends Activity implements OnClickListener {
 				e.printStackTrace();
 			}
 			addTime.setText(mb.getAddTime());
-			scale_price.setText(StringUtils.getPriceCommission(MyFavorite.this, mb.getScale_price()));
+			scale_price.setText( mb.getScale_price());
 			delete.setTag(mb);
 			delete.setOnClickListener(MyFavorite.this);
 			if (mb.getYincang()) {

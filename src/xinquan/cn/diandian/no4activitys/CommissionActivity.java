@@ -230,7 +230,7 @@ public class CommissionActivity extends Activity implements OnClickListener {
 			} else {
 				money_type.setText("(团队佣金)");
 			}
-			money.setText("￥" + cm.getMoney());
+			money.setText(cm.getMoney());
 			housesName.setText(cm.getHousesName());
 			cityName.setText("(" + cm.getCityName() + ")");
 			addTime.setText(cm.getAddTime());

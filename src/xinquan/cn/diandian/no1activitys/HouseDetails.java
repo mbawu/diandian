@@ -144,8 +144,8 @@ public class HouseDetails extends Activity implements OnClickListener {
 										.getString("housesName");
 								housesName.setText(share_title);
 								share_title = "发现一个不错的楼盘，" + share_title + "项目";
-								scale_price.setText(StringUtils.getPriceCommission(HouseDetails.this, StringUtils.convertIntString(response
-										.getString("scale_price"))));
+								scale_price.setText(response
+										.getString("scale_price"));
 								JSONObject jb = response
 										.getJSONObject("discount_time");
 								day.setText(jb.getString("day"));

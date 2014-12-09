@@ -133,7 +133,7 @@ public class Fragment1 extends Fragment implements OnClickListener {
 		public void onReceiveLocation(BDLocation location) {
 			loadCityName=location.getCity();
 			Log.i("test", loadCityName);
-			Toast.makeText(getActivity(), loadCityName, 2000).show();
+//			Toast.makeText(getActivity(), loadCityName, 2000).show();
 			MyApplication.locationCity=loadCityName;
 			getCityId();
 			
