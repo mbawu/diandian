@@ -14,6 +14,7 @@ import xinquan.cn.diandian.R;
 import xinquan.cn.diandian.TitleBarContainer;
 import xinquan.cn.diandian.UrlPath;
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -101,7 +102,8 @@ public class RegistActivity extends Activity implements OnClickListener {
 	 * 初始化View的引用
 	 */
 	private void initView() {
-		mTitleBar = new TitleBarContainer(findViewById(R.id.title_layout), R.string.title_regist);
+		mTitleBar = new TitleBarContainer(findViewById(R.id.title_layout),
+				R.string.title_regist);
 		mTitleBar.setRightMenuVisible(false);
 		queding = (Button) findViewById(R.id.queding);
 		username = (EditText) findViewById(R.id.username);
@@ -115,13 +117,12 @@ public class RegistActivity extends Activity implements OnClickListener {
 		female = (RadioButton) findViewById(R.id.female);
 		getcode = (TextView) findViewById(R.id.getcode);
 		cb = (CheckBox) findViewById(R.id.cb);
-		cb.setChecked(false);
 		show = (TextView) findViewById(R.id.show);
 		agree = (Button) findViewById(R.id.agree);
 		showview = (RelativeLayout) findViewById(R.id.showview);
 		if (sex == 2) {
 			female.setChecked(true);
-		} else if(sex==1) {
+		} else if (sex == 1) {
 			male.setChecked(true);
 		}
 	}
@@ -141,6 +142,11 @@ public class RegistActivity extends Activity implements OnClickListener {
 		 * 向服务器发送注册请求
 		 */
 		case R.id.queding:
+			if(!cb.isChecked())
+			{
+				Toast.makeText(this, "请先勾选同意用户协议按钮", Toast.LENGTH_LONG).show();
+				return;
+			}
 //			if (check) {
 				/*
 				 * 判断用户注册信息是否输入正确
@@ -327,20 +333,8 @@ public class RegistActivity extends Activity implements OnClickListener {
 		 * 用户阅读协议显示触发
 		 */
 		case R.id.show:
-			if (showview.getVisibility() == View.GONE) {
-				showview.setVisibility(View.VISIBLE);
-			} else {
-				showview.setVisibility(View.GONE);
-			}
-
-			break;
-		/*
-		 * 用户同意协议
-		 */
-		case R.id.agree:
-			showview.setVisibility(View.GONE);
-			cb.setChecked(true);
-			check = true;
+			Intent intent=new Intent().setClass(this, RegistContractActivity.class);
+			startActivity(intent);
 			break;
 		/*
 		 * 用户是否同意勾选了协议框

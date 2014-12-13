@@ -229,13 +229,13 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
-                android:visibility="gone" >
+                android:visibility="visible" >
 
                 <CheckBox
                     android:id="@+id/cb"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="已阅读"
+                    android:checked="true"
                     android:textColor="#808080" />
 
                 <TextView
@@ -245,9 +245,9 @@
                     android:layout_marginLeft="7dp"
                     android:paddingBottom="4dp"
                     android:paddingTop="4dp"
-                    android:text="( 点点卖房用户服务条款   )"
+                    android:text="我已认真阅读并同意《点点卖房用户服务条款》"
                     android:textColor="@color/gray"
-                    android:textSize="15sp" />
+                    android:textSize="14sp" />
             </LinearLayout>
 
             <RelativeLayout

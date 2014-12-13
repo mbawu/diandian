@@ -32,11 +32,25 @@
                     android:textColor="@color/gray"
                     android:textSize="15sp" />
 
-                <EditText
-                    android:id="@+id/name"
-                    style="@style/input_box"
-                    android:layout_marginLeft="15dp"
-                    android:hint="输入被推荐人姓名" />
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+
+                    <EditText
+                        android:id="@+id/name"
+                        style="@style/input_box"
+                        android:layout_marginLeft="15dp"
+                        android:hint="输入被推荐人姓名" />
+
+                    <ImageView
+                        android:id="@+id/getphone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/tongxunlu" />
+                </RelativeLayout>
             </LinearLayout>
 
             <LinearLayout
@@ -54,26 +68,11 @@
                     android:textColor="@color/gray"
                     android:textSize="15sp" />
 
-                <RelativeLayout
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp" >
-
-                    <EditText
-                        android:id="@+id/phone"
-                        style="@style/input_box"
-                        android:hint="输入被推荐人手机号码"
-                        android:paddingRight="10dp" />
-
-                    <ImageView
-                        android:id="@+id/getphone"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentRight="true"
-                        android:layout_centerVertical="true"
-                        android:layout_marginRight="5dp"
-                        android:background="@drawable/tongxunlu" />
-                </RelativeLayout>
+                <EditText
+                    android:id="@+id/phone"
+                    style="@style/input_box"
+                    android:layout_marginLeft="15dp"
+                    android:hint="输入被推荐人手机号码" />
             </LinearLayout>
 
             <LinearLayout
@@ -123,9 +122,9 @@
                 android:id="@+id/lv"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/system_padding_mid"
                 android:cacheColorHint="@color/transparent"
                 android:divider="@color/transparent"
-                android:layout_marginTop="@dimen/system_padding_mid"
                 android:dividerHeight="1dp" />
 
             <LinearLayout

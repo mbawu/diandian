@@ -52,6 +52,7 @@
 	<string name="title_suggest">推荐看房</string>
 	<string name="title_travel">旅游地产</string>
 	<string name="title_regist">用户注册</string>
+	<string name="title_regist_contract">用户协议</string>
 	<string name="title_getPassword">找回密码</string>
 	<string name="title_all_customer">所有客户</string>
 	<string name="title_customer_detail">客户详情</string>
