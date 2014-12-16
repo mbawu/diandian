@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.Serializable;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -73,7 +74,7 @@ public class HouseDetails extends Activity implements OnClickListener {
 	private TextView discount_note; // 优惠信息
 	private RelativeLayout map; // 地图
 	private TextView Cooperation_rules; // 合作规划
-	private TextView introduce; // 介绍
+	private RelativeLayout introduce; // 介绍
 	private NetworkImageView manageer_pictures; // 经纪人头像
 	private TextView manager; // 经纪人
 	private TextView manager_phone; // 经纪人联系方式
@@ -86,7 +87,7 @@ public class HouseDetails extends Activity implements OnClickListener {
 	private RecommendBean gb;
 	private ImageView jiantou;
 	private TitleBarContainer mTitleBar;
-	
+	private String data=null;
 	private String share_url;
 	private String share_image;
 	private String share_title;
@@ -133,6 +134,7 @@ public class HouseDetails extends Activity implements OnClickListener {
 						try {
 							if (response.getInt("code") == 1) {
 //								Log.i("test", "details-->"+response.toString());
+								data=response.toString();
 								housesId = (String) response.get("housesId");
 								purpose_num.setText(response
 										.getString("purpose_num"));
@@ -164,8 +166,9 @@ public class HouseDetails extends Activity implements OnClickListener {
 								
 								String introduceText = transTheSpace(response.getString(
 										"introduce").replace("\\n", "\n"));
-								introduce.setText(introduceText);
-								
+//								introduce.setText(introduceText);
+//								Log.i("test", "项目配套 :"+response.getString("note_mating"));
+//								Log.i("test", "楼盘简介 :"+response.getString("introduce"));
 								manager.setText(response.getString("manager"));
 								manager_phone.setText(response
 										.getString("manager_phone"));
@@ -255,7 +258,8 @@ public class HouseDetails extends Activity implements OnClickListener {
 		discount_note = (TextView) findViewById(R.id.discount_note);
 		map = (RelativeLayout) findViewById(R.id.map);
 		Cooperation_rules = (TextView) findViewById(R.id.Cooperation_rules);
-		introduce = (TextView) findViewById(R.id.introduce);
+		introduce = (RelativeLayout) findViewById(R.id.introduce);
+		introduce.setOnClickListener(this);
 		manageer_pictures = (NetworkImageView) findViewById(R.id.manageer_pictures);
 		manager = (TextView) findViewById(R.id.manager);
 		manager_phone = (TextView) findViewById(R.id.manager_phone);
@@ -393,6 +397,19 @@ public class HouseDetails extends Activity implements OnClickListener {
 			
 		case R.id.map:
 			gotoBaiduMap();
+			break;
+			/*
+			 * 楼盘介绍
+			 */
+		case R.id.introduce:
+			if(data!=null)
+			{
+				Intent in1 = new Intent(HouseDetails.this, HouseDetailsMore.class);
+				in1.putExtra("data", data);
+				startActivity(in1);
+			}
+			else
+				Toast.makeText(this, "还未读取到数据，请稍等！", Toast.LENGTH_LONG).show();
 			break;
 		default:
 			Intent in = new Intent(HouseDetails.this, HouseModelActivity.class);

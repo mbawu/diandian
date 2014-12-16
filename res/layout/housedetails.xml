@@ -6,8 +6,9 @@
     android:orientation="vertical" >
 
     <!-- TitleBar -->
-	<include layout="@layout/title_bar"/>
-	
+
+    <include layout="@layout/title_bar" />
+
     <!-- TopImageLayout -->
 
     <LinearLayout
@@ -201,12 +202,11 @@
                         </LinearLayout>
                     </LinearLayout>
 
-                    <View  
-     android:layout_width="1dip" 
-     android:layout_height="match_parent"
-     android:background="@color/lightgray"
-     android:layout_gravity="center_horizontal"
-     />
+                    <View
+                        android:layout_width="1dip"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@color/lightgray" />
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -394,30 +394,31 @@
                     </LinearLayout>
                 </LinearLayout>
 
-                <LinearLayout
+                <RelativeLayout
+                    android:id="@+id/introduce"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/system_padding"
                     android:layout_marginRight="@dimen/system_padding"
                     android:layout_marginTop="@dimen/system_padding"
-                    android:background="@android:color/white"
-                    android:orientation="vertical"
+                    android:background="@drawable/ly"
                     android:padding="@dimen/system_padding" >
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/house_sale_point"
+                        android:text="楼盘介绍"
                         android:textColor="@color/gray"
                         android:textSize="18sp" />
 
-                    <TextView
-                        android:id="@+id/introduce"
-                        android:layout_width="fill_parent"
+                    <ImageView
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/gray"
-                        android:textSize="15sp" />
-                </LinearLayout>
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dp"
+                        android:src="@drawable/my_go" />
+                </RelativeLayout>
             </LinearLayout>
         </ScrollView>
 
@@ -441,8 +442,8 @@
 
                     <com.android.volley.toolbox.NetworkImageView
                         android:id="@+id/manageer_pictures"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
                         android:layout_margin="3dp"
                         android:src="@drawable/ic_launcher" />
                 </LinearLayout>
