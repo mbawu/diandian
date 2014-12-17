@@ -92,6 +92,7 @@ public class HouseDetails extends Activity implements OnClickListener {
 	private String share_image;
 	private String share_title;
 	private StringBuilder share_message;
+	private String path;
 
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -181,6 +182,7 @@ public class HouseDetails extends Activity implements OnClickListener {
 										response.getString("manageer_pictures"),
 										manageer_pictures,
 										R.drawable.ic_launcher);
+								path=response.getString("manageer_pictures");
 								JSONArray ja = response
 										.getJSONArray("family_pictures");
 								gb = new RecommendBean();
@@ -406,6 +408,7 @@ public class HouseDetails extends Activity implements OnClickListener {
 			{
 				Intent in1 = new Intent(HouseDetails.this, HouseDetailsMore.class);
 				in1.putExtra("data", data);
+				in1.putExtra("path", path);
 				startActivity(in1);
 			}
 			else

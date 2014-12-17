@@ -109,11 +109,13 @@ public class HouseDetailsMore extends Activity implements OnClickListener {
 		txt13 = (TextView) findViewById(R.id.txt13);
 		txt14 = (TextView) findViewById(R.id.txt14);
 		txt15 = (TextView) findViewById(R.id.txt15);
-		manageer_pictures = (NetworkImageView) findViewById(R.id.manageer_pictures);
+		manageer_pictures = (NetworkImageView) findViewById(R.id.manageer_pictures1);
 		manager = (TextView) findViewById(R.id.manager);
 		manager_phone = (TextView) findViewById(R.id.manager_phone);
 		sharenote = (ImageView) findViewById(R.id.sharenote);
 		sharephone = (ImageView) findViewById(R.id.sharephone);
+		sharenote.setOnClickListener(this);
+		sharephone.setOnClickListener(this);
 	}
 
 	private String transTheSpace(String str) {
@@ -123,7 +125,11 @@ public class HouseDetailsMore extends Activity implements OnClickListener {
 	private void initData() throws JSONException {
 		Intent in = getIntent();
 		data = in.getStringExtra("data");
+		String path=in.getStringExtra("path");
 		JSONObject response = new JSONObject(data);
+		MyApplication.client.getImageForNetImageView(
+				path, manageer_pictures,
+				R.drawable.ic_launcher);
 		String introduceText = transTheSpace(response.getString("introduce")
 				.replace("\\n", "\n"));
 		Log.i("test", "介绍：" + introduceText);
@@ -142,13 +148,12 @@ public class HouseDetailsMore extends Activity implements OnClickListener {
 		txt13.setText(response.getString("note_storey"));
 		txt14.setText(response.getString("note_carport"));
 		txt15.setText(response.getString("note_correlation"));
-		MyApplication.client.getImageForNetImageView(
-				response.getString("manageer_pictures"), manageer_pictures,
-				R.drawable.ic_launcher);
+		
 		manager.setText(response.getString("manager"));
 		manager_phone.setText(response.getString("manager_phone"));
 	}
 
+	
 	@Override
 	public void onClick(View v) {
 		switch (v.getId()) {

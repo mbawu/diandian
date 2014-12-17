@@ -5,6 +5,6 @@
     <dimen name="title_bar_hight">60dp</dimen>
     <dimen name="customer_item_height">60dp</dimen>
     <dimen name="customer_item_process_width">10dp</dimen>
-    <dimen name="textSize">11sp</dimen>
+    <dimen name="textSize">12sp</dimen>
     <dimen name="padding_left_right">4dp</dimen>
 </resources>
